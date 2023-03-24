@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<html>
+
+<head>
+
+<title>AUBREY'S KINGDOM</title>
+
+
+<style>
+
+.epic_link{
+	background-color: red;
+}
+
+body {
+  background-image: url('pizzahead.webp');
+}
+
+.multicolortext {
+        background-image: linear-gradient(to left, violet, indigo, green, blue, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+#start_button_div {
+        position: absolute;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        
+    }
+
+    #start_button {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: blueviolet;
+        border: none;
+    }
+
+    #start_button:hover {
+        background-color: white;
+        cursor: pointer;
+    }
+
+#everything_lmao {
+display: none;
+}
+
+</style>
+
+
+
+
+
+<script>
+ 	  
+
+	var phrases = {
+        	like: [
+            	"PLAYING VIDEOGAMES",
+            	"BEING, LIKE SUPER COOL",
+			"WATCHING HIT SERIES SOUTH PARK",
+			"COMMITTING TO THE BIT",
+			"PUTING TYPOES IN MY SENTINCES"
+        ],
+        	likeagain: [
+            	"PROCRASTINATING ON MY HOMEWORK.",
+            	"BEING A SLEEPY WIDDLE BABY.",
+            	"STARING INTO THE ABYSS.",
+			"BLUE HAIR AND PRONOUNS",
+			"BEING A LITTLE BIT SILLY!"
+        ],
+		amamnot: [
+			"NOT A FURRY, I SWEAR.",
+			"WATCHING YOU.",
+			"ABSOLUTELY BODACIOUS.",
+			"SCARED OF BEES. THEY FLY AND STING OH MY GOD",
+			"MELTING INTO AN AMORPHOUS BLOB. IT HURTS."
+	  ],
+		favorite: [
+			"ANIMAL IS A GRIZZLY BEAR.",
+			"POKEMON IS GOLURK.",
+			"GODLY BEING IS MYSELF",
+			"BODY PART IS THE SMALL INTENTINES.",
+			"VIDEO GAME IS CROSSCODE."
+	  ],
+		aka: [
+			"COOL GIRL EXTRAORDINAIRE",
+			"PERSON WHO IS DEFINITELY NOT A FURRY",
+			"UMMMMM. UHHHHHH. UMMMMMM. UHHHHHHHHHH",
+			"ACTUAL GOD",
+			"OVERCONFIDENT BASTARD"
+	  ],
+		rude: [
+			"I LOOK LIKE A HOMESTUCK FAN",
+			"I AM A FURRY.",
+			"I AM AN ABSOLUTE @#!+$.",
+			"I AM C̶̢͑H̸͖̏Ả̷͕O̶̠̾S̶̼͋ ̵͖̐I̸̼͠T̶̡͠S̵̃͜E̸̥̊Ḻ̷͌F̷̼͠",
+			"I HAVE REPRESSED TRAUMA.",
+			"THIS WEBSITE IS POORLY MADE AND HARD TO LOOK AT."
+	  ],
+		presentation: [
+			"TEDTALK.",
+			"CULTIST MEETING.",
+			"5 HOUR YOUTUBE VIDEO ESSAY.",
+			"BEAUTIFUL WEBPAGE.",
+			"PYRAMID SCHEME."
+	  ]
+    };
+
+
+	document.addEventListener("DOMContentLoaded", () => {
+		let everything_lmao = document.getElementById("everything_lmao");
+		
+		let randomized_texts = document.getElementsByClassName("randomized_text");
+
+        for (let randomized_text of randomized_texts) {
+            console.log("Changing text: " + randomized_text.innerHTML);
+            let arr = phrases[randomized_text.innerHTML];
+            randomized_text.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+        }
+		 let epic_links = document.getElementsByClassName("epic_link");
+
+	var move_time =.1;
+
+        for (let epic_link of epic_links) {
+            console.log("registering event listener");
+            epic_link.addEventListener("mousemove", (e) => {
+                console.log("changing style");
+
+                epic_link.style = "position: absolute;\ntop: " + Math.random() * window.innerHeight + ";\nleft: " + 		Math.random() * window.innerWidth + ";transition: "+move_time+"s;";
+		move_time+=0.02;
+            });
+}
+
+        var audio_element = document.getElementById("rad_af_music");
+        var start_button = document.getElementById("start_button");
+        var start_button_div = document.getElementById("start_button_div");
+
+        start_button.addEventListener("click", () => {
+            start_button_div.style = "display: none;"
+		everything_lmao.style="display: inherit;";
+ 		audio_element.volume = 1;
+		audio_element.loop = "true";
+            audio_element.play();
+		})
+    });
+
+
+</script>
+
+<audio id="rad_af_music">
+        <source src="mytime.mp3">
+    </audio
+
+<body>
+
+<div id="everything_lmao">
+<h1><center><span class="multicolortext">ABOUT ME, AUBREY, THE RADDEST GIRL TO HAVE EVER WALKED UPON THIS GODFORSAKEN PLANET</span></center></h1>
+
+<p><h3><center>HEY.<center></h3></p>
+<p><h1><center>HEY.<center></h1></p>
+<p><h1><center>HEYHEYHEYHEYHEYHEYHEYHEYHEY.<center><h1></p>
+<p><h1><center>I'm <span class="multicolortext">AUBREY.</span></center></h1>
+<p><h4><center>Otherwise known as <span class="randomized_text">aka</span>.<center></h4></p>
+<p><center>I am 19 YEARS OLD and I go by <span class="multicolortext">SHE/THEY PRONOUNS (RADICAL)</span></center><p>
+<p><center>I like <span class="randomized_text">like</span> and <span class="randomized_text">likeagain</span><center></p>
+<p><center>I am <span class="randomized_text">amamnot</span><center></p>
+<p><center>My favorite <span class="randomized_text">favorite</span><center></p>
+<p><a href=https://twitter.com/i/status/1628504688072048642>THIS VIDEO IS A PERFECT REPRESENTATION OF MY VERY ESSENCE</a></p>
+<img src="aubrey.jpg" width="300" height="300" alt="Aubrey from hit game OMORI">
+<p><center>Here is a picture of hit video game character AUBREY from OMORI, who I share a name with for PURELY COINCIDENTAL REASONS<center><p>
+<p><center>A lot of people think that <span class="randomized_text">rude</span><center></p>
+<p><center>You wanna know what I think about them?<center></p>
+<p><center>I think that they should<center></p>
+<img src="RADICALBURNINGTEXT.gif" width="1200" height="300" alt="RADICAL BURNING TEXT THAT SAYS BURN IN HELL!!!!">
+<p><center>Thank you for coming to my <span class="randomized_text">presentation</span><center><center></p>
+<p><center>Make sure you LIKE and SUBSCRIBE for more EPIC CONTENT!<center></p>
+<a href="http://www.mspaintadventures.com/sweetbroandhellajeff/" class="epic_link">CLICK THIS TO ESCAPE</a>
+
+
+</div>
+<div id="start_button_div"><button id="start_button">Hello.<br>
+            Please press this button to access<br>
+            Aubrey's Radical Website.<br></button></div>
+</div>
+
+</body>
+</head>
+
+
+</html>
